@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+.share-tech-regular {
+    font-family: "Share Tech", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .archivo-black-regular {
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .quintessential-regular {
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+    
+
+
+.bod1{
+    background-image: url(homeimage.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100dvh;
+}
+
+.navbar{
+    /* border: black solid 5px; */
+    height: 15dvh;
+    display: flex;
+    align-items: center;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:black
+    
+}
+
+.tabs{
+    /* background-color: beige; */
+    display: flex;
+    justify-content: end;
+    flex:1;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin-right: 5rem;
+}
+
+.logo{
+    height: 100%;
+    overflow: hidden;
+}
+
+.bod2 {
+    /* background-color: #f8f8f8; */
+    background-color: rgb(163,163,163);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 2vw;
+    text-align: center;
+    font-family: "quintessential", serif;
+}
+
+.box {
+    max-width: 80vw;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-align: center;
+    color: #333;
+    padding: 3vh 5vw;
+    border-bottom: 2px solid #555;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.box.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.photos {
+    /* width: 85vw; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 3vh;
+    padding: 2vh;
+    overflow: hidden;
+}
+
+.imgs {
+    height: 20vh;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.imgs.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bod3 {
+    background-color: #f5f5f5; /* Light gray for readability */
+    padding: 5vh 8vw;
+    text-align: center;
+    font-family: "Quintessential", serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    /* max-width: 900px; */
+    margin: 5vh auto; /* Center alignment */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.loopvid{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    
+    /* background-color: aqua; */
+}
+
+
+
+.bod4 {
+    background-color: #fff; /* White background for contrast */
+    padding: 5vh 8vw;
+    text-align: center;
+    font-family: "Quintessential", serif;
+    color: #333;
+}
+
+.bod4 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5vh;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #555;
+}
+
+.appreciation-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 3vh 3vw;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+    margin: 0;
+    color: #444;
+}
+
+.card strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    /* padding: 20px; */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-bottom: 20px; */
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+

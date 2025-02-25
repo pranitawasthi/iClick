@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* background: #f4f4f4; */
+            background-color: #a3a3a3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #2c3e50;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 15dvh;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background: #2c3e50; */
+            background-color: #a3a3a3;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        
+
+        .logo img {
+            height: 15dvh;
+        }
+
+        .tabs ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .tabs ul a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .tabs ul a:hover {
+            color: #3498db;
+        }
+
+        form {
+            /* background: white; */
+            background-color: #a3a3a3;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 10px;
+            color: #34495e;
+        }
+
+        input, textarea, select {
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fff;
+            color: #2c3e50;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #95a5a6;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 8px;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .tabs ul {
+                gap: 10px;
+                font-size: 14px;
+            }
+            .logo img {
+                height: 40px;
+            }
+            form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="./index.html"><img src="logo2.png" alt="Logo"></a>
+        </div>
+        <div class="tabs">
+            <ul>
+                <a href="./in.html"><li>Photography</li></a>
+                <a href="./films.html"><li>Films</li></a>
+                <a href="./contact.html"><li>Contact Us</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <form id="eventForm">
+        <label for="first-name">First Name *</label>
+        <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+
+        <label for="last-name">Last Name *</label>
+        <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <label>Location *</label>
+        <div class="radio-group">
+            <input type="radio" id="phone" name="location" value="Phone call" required>
+            <label for="phone">Phone Call</label>
+            <input type="radio" id="somewhere-else" name="location" value="Somewhere else">
+            <label for="somewhere-else">Somewhere Else</label>
+        </div>
+
+        <label for="date">Date *</label>
+        <input type="date" name="date" id="date" required>
+
+        <label for="time">Time *</label>
+        <input type="time" name="time" id="time" required>
+
+        <label for="venue">When is the big day? And what's the venue?</label>
+        <textarea id="venue" name="venue" required placeholder="Enter venue details"></textarea>
+
+        <label for="theme">Do you have a theme in mind?</label>
+        <textarea id="theme" name="theme" required placeholder="Describe your theme"></textarea>
+
+        <label for="vibe">What’s the vibe you’re going for?</label>
+        <input type="text" id="vibe" name="vibe" required placeholder="Describe the vibe">
+
+        <button type="submit">Schedule Event</button>
+    </form>
+</body>
+</html>

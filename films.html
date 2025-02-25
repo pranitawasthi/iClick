@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iClick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Quintessential&family=Share+Tech&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #a3a3a3;
+            font-family: "Quintessential", serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5vh 2vw;
+            text-align: center;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            color: #333;
+            padding: 3vh 5vw;
+            border-bottom: 2px solid #555;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+        .title.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 3vh;
+            padding: 2vh;
+        }
+        .gallery img {
+            height: 20vh;
+            width: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .gallery img.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navbar{
+    /* border: black solid 5px; */
+    height: 15dvh;
+    display: flex;
+    align-items: center;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:black
+    
+}
+
+.logo{
+    height: 100%;
+    overflow: hidden;
+}
+
+.tabs{
+    /* background-color: beige; */
+    display: flex;
+    justify-content: end;
+    flex:1;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin-right: 5rem;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="./index.html"><img class="logo" src="logo2.png" alt=""></a></div>
+        <div class="tabs">
+            <ul>
+             <a href="./in.html"><li>Photography</li></a>   
+               <a href=""><li>Films</li></a> 
+                <!-- <li>About us</li> -->
+                <a href="./cont.html"><li>Contact us</li></a> 
+            </ul>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="title">Checkout Our Albums...</div>
+        <div class="gallery">
+            <img src="img4.jpeg" alt="Album Image">
+            <!-- <img src="WhatsApp Image 2025-02-15 at 2.17.50 AM (1).jpeg" alt="Album Image"> -->
+            <img src="WhatsApp Image 2025-02-15 at 2.17.50 AM.jpeg" alt="Album Image">
+            <img src="img7.jpeg" alt="Album Image">
+            <img src="img2.jpeg" alt="Album Image">
+            <img src="img3.jpeg" alt="Album Image">
+            <img src="img8.jpeg" alt="Album Image">
+            <img src="img9.jpeg" alt="Album Image">
+            <img src="img10.jpeg" alt="Album Image">
+            <img src="img12.jpeg" alt="Album Image">
+            <img src="pic1.jpg" alt="Album Image">
+            <img src="picss.jpeg" alt="Album Image">
+            <img src="img1.jpeg" alt="Album Image">
+            <img src="pict.jpg" alt="Album Image">
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const title = document.querySelector('.title');
+            const images = document.querySelectorAll('.gallery img');
+
+            setTimeout(() => title.classList.add('show'), 300);
+
+            images.forEach((img, index) => {
+                setTimeout(() => img.classList.add('show'), 500 + index * 150);
+            });
+        });
+    </script>
+</body>
+</html>

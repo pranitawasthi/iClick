@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a3a3a3;
+    /* background-color: #333; */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form container styling */
+#eventForm {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+#eventForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input field styling */
+#eventForm input[type="text"],
+#eventForm input[type="email"],
+#eventForm input[type="date"],
+#eventForm input[type="time"],
+#eventForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Radio button styling */
+#eventForm .radio-group {
+    margin-bottom: 20px;
+}
+
+#eventForm .radio-group label {
+    margin-right: 15px;
+    font-weight: normal;
+    color: #555;
+}
+
+/* Button styling */
+#eventForm button {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#eventForm button:hover {
+    background-color: #333;
+}
+
+/* Placeholder styling */
+#eventForm input::placeholder,
+#eventForm textarea::placeholder {
+    color: #999;
+}
+
+/* Focus styling */
+#eventForm input:focus,
+#eventForm textarea:focus {
+    outline: none;
+    border-color: #777;
+    background-color: #fff;
+}
+    </style>
+</head>
+<body>
+
+    <!-- <div class="bod1"> -->
+
+        <div class="navbar">
+            <div class="logo"><img class="logo" src="logo2.png" alt=""></div>
+            <div class="tabs">
+                <ul>
+                 <a href="./in.html"><li>Photography</li></a>   
+                   <a href="./films.html"><li>Films</li></a> 
+                    <!-- <li>About us</li> -->
+                    <a href="./cont.html"><li>Contact us</li></a> 
+                </ul>
+            </div>
+            
+        </div>
+
+        <form id="eventForm">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+    
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+    
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+    
+            <label>Location *</label>
+            <div class="radio-group">
+                <input type="radio" id="phone" name="location" value="Phone call" required>
+                <label for="phone">Phone Call</label>
+                <input type="radio" id="somewhere-else" name="location" value="Somewhere else">
+                <label for="somewhere-else">Somewhere Else</label>
+            </div>
+    
+            <label for="date">Date *</label>
+            <input type="date" name="date" id="date" required>
+    
+            <label for="time">Time *</label>
+            <input type="time" name="time" id="time" required>
+    
+            <label for="venue">When is the big day? And what's the venue?</label>
+            <textarea id="venue" name="venue" required placeholder="Enter venue details"></textarea>
+    
+            <label for="theme">Do you have a theme in mind?</label>
+            <textarea id="theme" name="theme" required placeholder="Describe your theme"></textarea>
+    
+            <label for="vibe">What’s the vibe you’re going for?</label>
+            <input type="text" id="vibe" name="vibe" required placeholder="Describe the vibe">
+    
+            <button type="submit">Schedule Event</button>
+        </form>
+    
+</body>
+</html>
